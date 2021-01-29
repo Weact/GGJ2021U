@@ -16,8 +16,7 @@ public class MoveObjectController : MonoBehaviour
 	private GUIStyle guiStyle;
 	private string msg;
 
-	private int rayLayerMask; 
-
+	private int rayLayerMask;
 
 	void Start()
 	{
@@ -91,12 +90,30 @@ public class MoveObjectController : MonoBehaviour
 					bool isOpen = anim.GetBool(animBoolNameNum);	//need current state for message.
 					msg = getGuiMsg(isOpen);
 
-					if (Input.GetKeyUp(KeyCode.E) || Input.GetButtonDown("Fire1"))
-					{
-						anim.enabled = true;
-						anim.SetBool(animBoolNameNum,!isOpen);
-						msg = getGuiMsg(!isOpen);
+					if(gameObject.GetComponent<Lock>() == null)
+                    {
+						if ((Input.GetKeyUp(KeyCode.E) || Input.GetButtonDown("Fire1")))
+						{
+							anim.enabled = true;
+							anim.SetBool(animBoolNameNum, !isOpen);
+							msg = getGuiMsg(!isOpen);
+						}
+                    }
+                    else
+                    {
+						if (gameObject.GetComponent<Lock>().lockdoor)
+						{
+							msg = "You need to find the required objects to open this Door !";
+						}
+
+						if ((Input.GetKeyUp(KeyCode.E) || Input.GetButtonDown("Fire1")) && !gameObject.GetComponent<Lock>().lockdoor )
+						{
+							anim.enabled = true;
+							anim.SetBool(animBoolNameNum, !isOpen);
+							msg = getGuiMsg(!isOpen);
+						}
 					}
+					
 
 				}
 			}
