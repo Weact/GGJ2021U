@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Day-Night Skyboxes/Materials/SkyEarlyDusk.mat.meta
+guid: 060628e39ddd78745ace7ba48c82f210
+=======
 guid: d3231fa55a61e8e49bf3bc009be557f5
+>>>>>>> 00d99013ad511df9adb815a6459e897244626d09:Assets/Materials/Background_Menu.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0

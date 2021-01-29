@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Day-Night Skyboxes/Textures.meta
+guid: 2a9698feba7efab4386841edc089d736
+folderAsset: yes
+=======
 guid: 5f742c73a17a24748b8beb9e55e18fcc
+>>>>>>> 00d99013ad511df9adb815a6459e897244626d09:Assets/Scenes/Menu.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
