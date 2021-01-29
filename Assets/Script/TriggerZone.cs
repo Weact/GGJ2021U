@@ -9,10 +9,10 @@ public class TriggerZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.tag == "Player")
         {
             Debug.Log(Player.transform.position);
-            Player.transform.position = new Vector3(target.transform.position.x, target.transform.position.y, target.transform.position.z);
+            Player.transform.position = target.transform.position;
             Debug.Log(Player.transform.position);
         }
     }
