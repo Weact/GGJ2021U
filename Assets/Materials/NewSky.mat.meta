@@ -1,8 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/FurnishedCabin/Scenes/Demo/LightingData.asset.meta
+guid: bc6c9c92b538c2c40a679a54a93e1024
+=======
 guid: 1a19d68842f205d479cc641950ad7b1c
+>>>>>>> 00d99013ad511df9adb815a6459e897244626d09:Assets/Materials/NewSky.mat.meta
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 0
+  mainObjectFileID: 25800000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
