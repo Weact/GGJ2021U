@@ -23,7 +23,8 @@ public class PickUpKey : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            target.GetComponent<Lock>().lockdoor = false;
+            target.GetComponent<Lock>().keysCollected++;
+            target.GetComponent<Lock>().tryToOpenDoor();
             Destroy(gameObject);
         }
     }
