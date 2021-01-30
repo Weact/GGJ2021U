@@ -31,7 +31,7 @@ public class MoveObjectController : MonoBehaviour
 
 		//create AnimatorOverrideController to re-use animationController for sliding draws.
 		anim = GetComponent<Animator>(); 
-		anim.enabled = false;  //disable animation states by default.  
+		anim.enabled = true;  //disable animation states by default.  
 
 		//the layer used to mask raycast for interactable objects only
 		LayerMask iRayLM = LayerMask.NameToLayer("InteractRaycast");
@@ -179,10 +179,10 @@ public class MoveObjectController : MonoBehaviour
 		string rtnVal;
 		if (isOpen)
 		{
-			rtnVal = "Press E/Fire1 to Close";
+			rtnVal = "Press E/Fire1 to Open";
 		}else
 		{
-			rtnVal = "Press E/Fire1 to Open";
+			rtnVal = "Press E/Fire1 to Close";
 		}
 
 		return rtnVal;
