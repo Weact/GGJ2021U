@@ -48,8 +48,16 @@ public class SC_FPSController : MonoBehaviour
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
-        if (((curSpeedX == 1 || curSpeedY == 1 || curSpeedX == -1 || curSpeedY == -1) && !audio.GetComponent<AudioSource>().isPlaying))
+        if (((curSpeedX != 0 || curSpeedY != 0) && !audio.GetComponent<AudioSource>().isPlaying))
         {
+            if(curSpeedX == 2 || curSpeedY == 2 || curSpeedX == -2 || curSpeedY == -2)
+            {
+                audio.GetComponent<AudioSource>().pitch = 1.3f;
+            }
+            else
+            {
+                audio.GetComponent<AudioSource>().pitch = 1.0f;
+            }
             audio.GetComponent<AudioSource>().Play();
         }
 
