@@ -21,6 +21,10 @@ public class SC_FPSController : MonoBehaviour
     [HideInInspector]
     public bool canMove = true;
 
+    [SerializeField]
+    private GameObject audio;
+   
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -28,6 +32,8 @@ public class SC_FPSController : MonoBehaviour
         // Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        
     }
 
     void Update()
@@ -41,6 +47,12 @@ public class SC_FPSController : MonoBehaviour
         float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Horizontal") : 0;
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+
+        if (((curSpeedX == 1 || curSpeedY == 1 || curSpeedX == -1 || curSpeedY == -1) && !audio.GetComponent<AudioSource>().isPlaying))
+        {
+            audio.GetComponent<AudioSource>().Play();
+        }
+
 
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
