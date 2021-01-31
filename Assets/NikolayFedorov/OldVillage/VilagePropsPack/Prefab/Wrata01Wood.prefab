@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3383850}
   - component: {fileID: 2374664}
   - component: {fileID: 6494822}
-  - component: {fileID: 20577668}
   m_Layer: 0
   m_Name: Wrata01Door01LOD0
   m_TagString: Untagged
@@ -62,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bb481a8cc0e704f4a8c3bb6ee6cf2159, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,33 +96,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 66eb9d82f5978134aabccc3f159747ad, type: 3}
---- !u!205 &20577668
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129462}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: -0.058639377, y: -0.54034996, z: -0.00000011920929}
-  m_Size: 2.0330946
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.25698465
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 2374664}
-  - screenRelativeHeight: 0.097651295
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 2390902}
-  - screenRelativeHeight: 0.011266306
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 2360202}
-  m_Enabled: 1
 --- !u!1 &131394
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +186,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bb481a8cc0e704f4a8c3bb6ee6cf2159, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -293,7 +265,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bb481a8cc0e704f4a8c3bb6ee6cf2159, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -326,7 +298,6 @@ GameObject:
   - component: {fileID: 3343890}
   - component: {fileID: 2335586}
   - component: {fileID: 6426578}
-  - component: {fileID: 20547888}
   m_Layer: 0
   m_Name: Wrata01Detail
   m_TagString: Untagged
@@ -376,8 +347,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d6425f15177796044bd3ad0c26c16ec5, type: 2}
-  - {fileID: 2100000, guid: bb481a8cc0e704f4a8c3bb6ee6cf2159, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 2100000, guid: 1c4e5281eda0d1a4991b549e8b64a9e1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -413,33 +384,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300010, guid: 66eb9d82f5978134aabccc3f159747ad, type: 3}
---- !u!205 &20547888
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169688}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: -0.033706903, y: 0.011440992, z: 0.30418086}
-  m_Size: 4.5630217
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.2987924
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 2335586}
-  - screenRelativeHeight: 0.10014715
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 2339690}
-  - screenRelativeHeight: 0.013014101
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 2398416}
-  m_Enabled: 1
 --- !u!1 &177066
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +442,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bb481a8cc0e704f4a8c3bb6ee6cf2159, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -577,7 +521,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bb481a8cc0e704f4a8c3bb6ee6cf2159, type: 2}
+  - {fileID: 0}
   - {fileID: 2100000, guid: 1c4e5281eda0d1a4991b549e8b64a9e1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
