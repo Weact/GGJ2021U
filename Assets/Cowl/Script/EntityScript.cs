@@ -9,17 +9,18 @@ public class EntityScript : MonoBehaviour
 
     public Camera playerCamera;
 
-    bool go;
+    private bool go;
 
-    SC_FPSController playerScript;
+    private SC_FPSController playerScript;
 
-    float Dificulty = 60f;
+    public float Dificulty = 60f;
 
-    float timer = 0.0f;
-    float timerDeath = 0.0f;
+    private float timer = 0.0f;
+    private float timerDeath = 0.0f;
 
-    float speedB;
-    float fullSpeedB;
+    private float speedB;
+    private float fullSpeedB;
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,30 +35,34 @@ public class EntityScript : MonoBehaviour
     {
             transform.LookAt(target.transform.position); // dudule see always player
 
-        if (gameObject.transform.position.x < target.transform.position.x && go )
+        if (go)
         {
-            transform.position += Vector3.right * Time.deltaTime;
-        }
-        if (gameObject.transform.position.z < target.transform.position.z && go)
-        {
-            transform.position += Vector3.forward * Time.deltaTime;
-        }
-        if (gameObject.transform.position.y < target.transform.position.y && go)
-        {
-            transform.position += Vector3.up * Time.deltaTime;
-        }
 
-        if (gameObject.transform.position.x > target.transform.position.x && go)
-        {
-            transform.position += Vector3.left * Time.deltaTime;
-        }
-        if (gameObject.transform.position.z > target.transform.position.z && go)
-        {
-            transform.position += Vector3.back * Time.deltaTime;
-        }
-        if (gameObject.transform.position.y > target.transform.position.y && go)
-        {
-            transform.position += Vector3.down * Time.deltaTime;
+            if (gameObject.transform.position.x < target.transform.position.x)
+            {
+                transform.position += Vector3.right * playerScript.walkingSpeed * Time.deltaTime;
+            }
+            if (gameObject.transform.position.z < target.transform.position.z)
+            {
+                transform.position += Vector3.forward * playerScript.walkingSpeed * Time.deltaTime;
+            }
+            if (gameObject.transform.position.y < target.transform.position.y)
+            {
+                transform.position += Vector3.up * playerScript.walkingSpeed * Time.deltaTime;
+            }
+
+            if (gameObject.transform.position.x > target.transform.position.x)
+            {
+                transform.position += Vector3.left * playerScript.walkingSpeed * Time.deltaTime;
+            }
+            if (gameObject.transform.position.z > target.transform.position.z)
+            {
+                transform.position += Vector3.back * playerScript.walkingSpeed * Time.deltaTime;
+            }
+            if (gameObject.transform.position.y > target.transform.position.y)
+            {
+                transform.position += Vector3.down * playerScript.walkingSpeed * Time.deltaTime;
+            }
         }
 
     }
@@ -82,16 +87,19 @@ public class EntityScript : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+
             timerDeath += Time.deltaTime;
-            Debug.Log(timerDeath);
+            //Debug.Log(timerDeath);
 
             if(GetComponent<Renderer>().IsVisibleFrom(playerCamera)) //if player see Dudule
             {
                 timer += Time.deltaTime;
+               // Debug.Log("Je le vois");
+               // Debug.Log(timer);
 
                 if(timer >= 2f) //after 2sec be seen Dudule
                 {
-                    Vector3 posit = gameObject.transform.position; //tp DUdule
+                    Vector3 posit = gameObject.transform.position; //tp Dudule
                     posit.x += Dificulty;
                     gameObject.transform.position = posit;
                 }
