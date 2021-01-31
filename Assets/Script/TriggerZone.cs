@@ -14,18 +14,27 @@ public class TriggerZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other);
         if(other.tag == "Player")
         {
-            diff = Player.transform.position - Dudule.position;
+            if(Dudule != null)
+            {
+                diff = Player.transform.position - Dudule.position;
+            }
 
            // Debug.Log(Player.transform.position);
            Player.transform.position = target.transform.position;
             // Debug.Log(Player.transform.position);
 
-            Dudule.position = target.transform.position + diff;
+            if (Dudule != null)
+            {
+                Dudule.position = target.transform.position + diff;
 
-            scriptDudule.Dificulty = 30f;
-
+                if(scriptDudule != null)
+                {
+                    scriptDudule.Dificulty = 30f;
+                }
+            }
         }
     }
 }
