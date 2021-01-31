@@ -22,7 +22,7 @@ public class SC_FPSController : MonoBehaviour
     public bool canMove = true;
 
     [SerializeField]
-    private GameObject audio;
+    public GameObject audiofootstep;
    
 
     void Start()
@@ -48,17 +48,18 @@ public class SC_FPSController : MonoBehaviour
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
-        if (((curSpeedX != 0 || curSpeedY != 0) && !audio.GetComponent<AudioSource>().isPlaying))
+        if (((curSpeedX != 0 || curSpeedY != 0) && !audiofootstep.GetComponent<AudioSource>().isPlaying))
         {
-            if(curSpeedX == 2 || curSpeedY == 2 || curSpeedX == -2 || curSpeedY == -2 || curSpeedX == 3 || curSpeedY == 3 || curSpeedX == -3 || curSpeedY == -3)
+            if (isRunning)
             {
-                audio.GetComponent<AudioSource>().pitch = 1.3f;
+                audiofootstep.GetComponent<AudioSource>().pitch = 1.3f;
             }
             else
             {
-                audio.GetComponent<AudioSource>().pitch = 1.0f;
+                audiofootstep.GetComponent<AudioSource>().pitch = 1.0f;
             }
-            audio.GetComponent<AudioSource>().Play();
+
+            audiofootstep.GetComponent<AudioSource>().Play();
         }
 
 
