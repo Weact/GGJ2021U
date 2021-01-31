@@ -21,6 +21,10 @@ public class EntityScript : MonoBehaviour
     private float speedB;
     private float fullSpeedB;
 
+    public AudioSource hearBeat;
+
+    public AudioSource goAway;
+
 
     // Start is called before the first frame update
     void Start()
@@ -79,7 +83,9 @@ public class EntityScript : MonoBehaviour
 
             playerScript.runningSpeed = 0.25f;
             playerScript.walkingSpeed = 0.25f;
-            go = false;            
+            go = false;
+
+            hearBeat.Play();
         }
     }
 
@@ -94,8 +100,13 @@ public class EntityScript : MonoBehaviour
             if(GetComponent<Renderer>().IsVisibleFrom(playerCamera)) //if player see Dudule
             {
                 timer += Time.deltaTime;
-               // Debug.Log("Je le vois");
-               // Debug.Log(timer);
+                Debug.Log("Je le vois");
+                Debug.Log(timer);
+
+                if(!goAway.isPlaying)
+                {
+                    goAway.Play();
+                }
 
                 if(timer >= 2f) //after 2sec be seen Dudule
                 {
@@ -124,6 +135,11 @@ public class EntityScript : MonoBehaviour
             playerScript.walkingSpeed = speedB;
             playerScript.runningSpeed = fullSpeedB;
             go = true;
+
+            if(hearBeat.isPlaying)
+            {
+                hearBeat.Stop();
+            }
         }
     }
 }
