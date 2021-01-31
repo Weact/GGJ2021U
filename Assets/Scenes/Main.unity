@@ -284,7 +284,6 @@ GameObject:
   m_Component:
   - component: {fileID: 706765530}
   - component: {fileID: 706765529}
-  - component: {fileID: 706765528}
   m_Layer: 0
   m_Name: ForestPreviewCamera
   m_TagString: Untagged
@@ -292,14 +291,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &706765528
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706765527}
-  m_Enabled: 1
 --- !u!20 &706765529
 Camera:
   m_ObjectHideFlags: 0
@@ -1637,17 +1628,17 @@ PrefabInstance:
     - target: {fileID: 4418547190539306212, guid: a79dcbc4bbd2f464b8ef771410a4e71d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.43
+      value: 5096.08
       objectReference: {fileID: 0}
     - target: {fileID: 4418547190539306212, guid: a79dcbc4bbd2f464b8ef771410a4e71d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.06
+      value: 3.85
       objectReference: {fileID: 0}
     - target: {fileID: 4418547190539306212, guid: a79dcbc4bbd2f464b8ef771410a4e71d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 27.85
+      value: 139.54
       objectReference: {fileID: 0}
     - target: {fileID: 4418547190539306212, guid: a79dcbc4bbd2f464b8ef771410a4e71d,
         type: 3}
