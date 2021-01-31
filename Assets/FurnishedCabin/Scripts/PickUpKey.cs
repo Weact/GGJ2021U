@@ -29,8 +29,17 @@ public class PickUpKey : MonoBehaviour
             {
                 pickupitem.Play();
             }
-            target.GetComponent<Lock>().keysCollected++;
-            target.GetComponent<Lock>().tryToOpenDoor();
+            if(target.GetComponent<Lock>() != null)
+            {
+                target.GetComponent<Lock>().keysCollected++;
+                target.GetComponent<Lock>().tryToOpenDoor();
+            }
+            if (target.GetComponent<cp_exit_garden>() != null)
+            {
+                target.GetComponent<cp_exit_garden>().currentCollectedItems++;
+                target.GetComponent<cp_exit_garden>().tryToOpenGate();
+            }
+            
             Destroy(gameObject);
         }
     }
