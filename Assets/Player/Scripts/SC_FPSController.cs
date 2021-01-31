@@ -50,7 +50,7 @@ public class SC_FPSController : MonoBehaviour
 
         if (((curSpeedX != 0 || curSpeedY != 0) && !audio.GetComponent<AudioSource>().isPlaying))
         {
-            if(curSpeedX == 2 || curSpeedY == 2 || curSpeedX == -2 || curSpeedY == -2)
+            if(curSpeedX == 2 || curSpeedY == 2 || curSpeedX == -2 || curSpeedY == -2 || curSpeedX == 3 || curSpeedY == 3 || curSpeedX == -3 || curSpeedY == -3)
             {
                 audio.GetComponent<AudioSource>().pitch = 1.3f;
             }

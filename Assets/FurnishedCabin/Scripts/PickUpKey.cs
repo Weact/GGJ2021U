@@ -6,6 +6,8 @@ public class PickUpKey : MonoBehaviour
 {
     [SerializeField]
     private GameObject target;
+    [SerializeField]
+    AudioSource pickupitem;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,10 @@ public class PickUpKey : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            if(pickupitem != null)
+            {
+                pickupitem.Play();
+            }
             target.GetComponent<Lock>().keysCollected++;
             target.GetComponent<Lock>().tryToOpenDoor();
             Destroy(gameObject);

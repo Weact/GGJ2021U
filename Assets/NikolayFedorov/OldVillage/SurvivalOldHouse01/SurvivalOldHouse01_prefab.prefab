@@ -1001,6 +1001,7 @@ GameObject:
   - component: {fileID: 4152677807950642}
   - component: {fileID: 33414339862388040}
   - component: {fileID: 23437667813360196}
+  - component: {fileID: 4021655260511077072}
   m_Layer: 0
   m_Name: LOD_0_DoorWood
   m_TagString: Untagged
@@ -1069,6 +1070,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4021655260511077072
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415332074717188}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: 6f053ae833d41ef4aaadf4ef73f9cd75, type: 3}
 --- !u!1 &1427207880910184
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,6 +18,16 @@ public class MoveObjectController : MonoBehaviour
 
 	private int rayLayerMask;
 
+	[SerializeField]
+	AudioSource opendrawer;
+	[SerializeField]
+	AudioSource closedrawer;
+	[SerializeField]
+	AudioSource closedoor;
+	[SerializeField]
+	AudioSource opendoor;
+
+
 	void Start()
 	{
 		//Initialize moveDrawController if script is enabled.
@@ -62,7 +72,7 @@ public class MoveObjectController : MonoBehaviour
 	}
 
 
-
+	
 	void Update()
 	{		
 		if (playerEntered)
@@ -81,7 +91,7 @@ public class MoveObjectController : MonoBehaviour
 				{	//it's not so return;
 					return;
 				}
-					
+
 				if (moveableObject != null)		//hit object must have MoveableDraw script attached
 				{
 					showInteractMsg = true;
@@ -97,6 +107,42 @@ public class MoveObjectController : MonoBehaviour
 							anim.enabled = true;
 							anim.SetBool(animBoolNameNum, !isOpen);
 							msg = getGuiMsg(!isOpen);
+
+                            if (isOpen)
+                            {
+								if (gameObject.tag == "drawers")
+								{
+									if(closedrawer != null)
+                                    {
+										closedrawer.Play();
+									}
+								}
+								if (gameObject.tag == "doors" || gameObject.tag == "closedDoor")
+								{
+									if (closedoor != null)
+									{
+										closedoor.Play();
+									}
+								}
+							}
+                            else
+                            {
+								if (gameObject.tag == "drawers")
+								{
+									if (opendrawer != null)
+									{
+										opendrawer.Play();
+									}
+								}
+								if (gameObject.tag == "doors" || gameObject.tag == "closedDoor")
+								{
+									if (opendoor != null)
+									{
+										opendoor.Play();
+									}
+								}
+							}
+							
 						}
                     }
                     else
@@ -111,6 +157,29 @@ public class MoveObjectController : MonoBehaviour
 							anim.enabled = true;
 							anim.SetBool(animBoolNameNum, !isOpen);
 							msg = getGuiMsg(!isOpen);
+
+							if (isOpen)
+							{
+								if (gameObject.tag == "drawers")
+								{
+									closedrawer.Play();
+								}
+								if (gameObject.tag == "doors" || gameObject.tag == "closedDoor")
+								{
+									closedoor.Play();
+								}
+							}
+							else
+							{
+								if (gameObject.tag == "drawers")
+								{
+									opendrawer.Play();
+								}
+								if (gameObject.tag == "doors" || gameObject.tag == "closedDoor")
+								{
+									opendoor.Play();
+								}
+							}
 						}
 					}
 					
