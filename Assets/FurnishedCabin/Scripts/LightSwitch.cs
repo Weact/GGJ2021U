@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class LightSwitch : MonoBehaviour
 {
+    [SerializeField]
+    AudioSource toggle;
+
     private bool canInteract = false;
     [SerializeField]
     private GameObject Lumieres = null;
@@ -31,6 +34,10 @@ public class LightSwitch : MonoBehaviour
     {
         if (Lumieres != null)
         {
+            if(toggle != null)
+            {
+                toggle.Play();
+            }
             Lumieres.SetActive(!Lumieres.activeSelf);
         }
     }

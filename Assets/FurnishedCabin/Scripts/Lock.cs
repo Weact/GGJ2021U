@@ -6,6 +6,8 @@ public class Lock : MonoBehaviour
 {
     public int requiredKeys;
     public int keysCollected = 0;
+    [SerializeField]
+    AudioSource allkeyscollected;
 
     public bool lockdoor = false;
     // Start is called before the first frame update
@@ -24,6 +26,10 @@ public class Lock : MonoBehaviour
     {
         if (keysCollected == requiredKeys)
         {
+            if (allkeyscollected != null)
+            {
+                allkeyscollected.Play();
+            }
             lockdoor = false;
         }
     }
