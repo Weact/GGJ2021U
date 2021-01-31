@@ -5,7 +5,7 @@ public class MoveObjectController : MonoBehaviour
 {
 	public float reachRange = 1.8f;			
 
-	private Animator anim;
+	public Animator anim;
 	private Camera fpsCam;
 	private GameObject player;
 

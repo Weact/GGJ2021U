@@ -12,6 +12,15 @@ public class cp_house_exit : MonoBehaviour
     private GameObject gamemusicmanager;
     [SerializeField]
     private AudioClip forestmusic;
+    [SerializeField]
+    private AudioClip forestfootstep;
+
+    [SerializeField]
+    private GameObject player;
+
+    [SerializeField]
+    private GameObject housedoor;
+
 
     private bool forestmusichasstarted = false;
 
@@ -28,6 +37,7 @@ public class cp_house_exit : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        housedoor.gameObject.GetComponent<Lock>().lockdoor = true;
         if (other.tag == "Player")
         {
             heartbeat_slow = other.gameObject.GetComponent<AudioSource>();
@@ -47,8 +57,9 @@ public class cp_house_exit : MonoBehaviour
                 gamemusicmanager.GetComponent<AudioSource>().Play();
                 forestmusichasstarted = true;
             }
-            
-            
+
+            player.GetComponent<SC_FPSController>().audiofootstep.GetComponent<AudioSource>().clip = forestfootstep;
+
         }
     }
 }
